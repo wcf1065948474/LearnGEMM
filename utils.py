@@ -3,13 +3,13 @@ import subprocess
 import matplotlib.pyplot as plt
 plt.rcParams['figure.figsize'] = [15, 10]
 
-mnk_list          = []
-new_avg_time_list = []
-old_avg_time_list = []
-
 src_path = './src'
 
 def build_and_run(old_file_name, new_file_name, show=True):
+    mnk_list          = []
+    new_avg_time_list = []
+    old_avg_time_list = []
+
     cmd = []
     cmd.append('g++')
     cmd.append(os.path.join(src_path, 'main.cpp'))
